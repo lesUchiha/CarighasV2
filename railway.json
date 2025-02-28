@@ -1,0 +1,19 @@
+{
+    "services": [
+      {
+        "name": "AnimalArena",
+        "buildCommand": "pip install -r animalarena/api/requirements.txt",
+        "startCommand": "uvicorn animalarena.api.v1.api:app --host 0.0.0.0 --port $PORT"
+      },
+      {
+        "name": "AutoFarm",
+        "buildCommand": "pip install -r autofarm/api/requirements.txt",
+        "startCommand": "uvicorn autofarm.api.v1.api:app --host 0.0.0.0 --port $PORT"
+      },
+      {
+        "name": "proxy",
+        "buildCommand": "pip install -r proxy/requirements.txt",
+        "startCommand": "uvicorn proxy.main:app --host 0.0.0.0 --port $PORT"
+      }
+    ]
+  }
